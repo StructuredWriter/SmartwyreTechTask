@@ -1,6 +1,6 @@
-﻿namespace Smartwyre.DeveloperTest.Types;
+﻿namespace Smartwyre.DeveloperTest.Domain.Enums;
 
-public enum SupportedIncentiveType
+public enum ESupportedIncentiveType
 {
     FixedRateRebate = 1 << 0,
     AmountPerUom = 1 << 1,
