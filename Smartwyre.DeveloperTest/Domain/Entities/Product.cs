@@ -1,4 +1,6 @@
-﻿namespace Smartwyre.DeveloperTest.Types;
+﻿using Smartwyre.DeveloperTest.Domain.Enums;
+
+namespace Smartwyre.DeveloperTest.Domain.Entities;
 
 public class Product
 {
@@ -6,5 +8,5 @@ public class Product
     public string Identifier { get; set; }
     public decimal Price { get; set; }
     public string Uom { get; set; }
-    public SupportedIncentiveType SupportedIncentives { get; set; }
+    public ESupportedIncentiveType SupportedIncentives { get; set; }
 }

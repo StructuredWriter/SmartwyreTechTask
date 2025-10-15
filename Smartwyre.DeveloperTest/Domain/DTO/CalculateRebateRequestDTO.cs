@@ -1,6 +1,6 @@
-﻿namespace Smartwyre.DeveloperTest.Types;
+﻿namespace Smartwyre.DeveloperTest.Domain.RequestModels;
 
-public class CalculateRebateRequest
+public class CalculateRebateRequestDTO
 {
     public string RebateIdentifier { get; set; }
 

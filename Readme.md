@@ -44,3 +44,34 @@ You are free to use any frameworks/NuGet packages that you see fit. You should p
 Feel free to use code comments to describe your changes. You are also welcome to update this readme with any important details for us to consider.
 
 Once you have completed the exercise either ensure your repository is available publicly or contact the hiring manager to set up a private share.
+
+
+
+# Solution
+
+Short achievments form: 
+
+- The solution builds and all tests pass.
+- The code is structured according to clean architecture.
+- The service is fully testable and open for extension.
+- Logging and DI are implemented for maintainability.
+- The service no longer uses switch statements — instead, a factory and strategy pattern combination is used.
+
+Details of solution: 
+I reorganized the code into logical layers (domain, services, data stores) and applied SOLID principles.
+The RebateService was rewritten to be easily testable and extendable for new incentive types.
+
+Currently three incentive types supported : FixedCashAmount, FixedRateRebate, AmountPerUom,
+each of them has its own calculation strategy implemented via separate classes.
+
+The service no longer uses switch statements — instead, a factory and strategy pattern combination is used.
+This allows new incentive types to be added in the future without modifying existing logic.
+
+Unit tests were added using xUnit and Moq.
+They cover the main scenarios:
+
+- missing rebate or product
+- rebate not applicable
+- successful calculation
+
+All tests passed successfully
